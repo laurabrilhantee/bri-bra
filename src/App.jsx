@@ -6,6 +6,7 @@ import Picanha from './assets/Picanha.jpg'
 import Outbacker from './assets/Outbacker.jpg'
 import logo from './assets/image.png'
 
+
 export default function App() {
 
   const CLASSES = [
@@ -41,7 +42,7 @@ const corBarra = pct > 0.5 ? "#5DCAA5" : pct > 0.25 ? "#EF9F27" : "#E24B4A";
         <section>
           
           <h1>
-            <img src="/src/assets/image.png" className="logo" />
+            <img src={logo} className="logo" />
           </h1>
         
           <div className="thumb">
