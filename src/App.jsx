@@ -17,10 +17,10 @@ export default function App() {
   ];
 
   //Variaveis useStates
-  const [nome, setNome] = useState(""); // nome do pedido
-  const [hp, setHp] = useState(100); // satisfação do cliente
-  const [vivo, setVivo] = useState(true); // pedido disponível
-  const [classe, setClasse] = useState(CLASSES[0]); // lanche selecionado
+  const [nome, setNome] = useState("");
+  const [hp, setHp] = useState(100); 
+  const [vivo, setVivo] = useState(true);
+  const [classe, setClasse] = useState(CLASSES[0]);
 
   const receberDano = () => {
   const novoHp = Math.max(0, hp - 10);
@@ -56,7 +56,6 @@ const corBarra = pct > 0.5 ? "#5DCAA5" : pct > 0.25 ? "#EF9F27" : "#E24B4A";
             onChange={(e) => setNome(e.target.value)}  
           />
 
-             {/* STATUS DO PEDIDO */}
         <div className="status">
           <p>Status do Pedido</p>
           <p>Disponível</p>
@@ -64,14 +63,12 @@ const corBarra = pct > 0.5 ? "#5DCAA5" : pct > 0.25 ? "#EF9F27" : "#E24B4A";
           <span>{vivo ? "true" : "false"}</span>
         </div>
 
-        {/* SATISFAÇÃO DO CLIENTE */}
         <p id='pontosVida'>
           Satisfação do Cliente {hp}/100
         </p>
 
         <div className="barra" style={{background: corBarra}}></div>
 
-        {/* AÇÕES */}
         <button 
           className='BTcura'
           onClick={receberDano}  
